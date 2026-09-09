@@ -1,0 +1,11 @@
+// Recursive Fibonacci — prints fib(0)..fib(14)
+fn fib(n) {
+    if (n < 2) { return n; }
+    return fib(n - 1) + fib(n - 2);
+}
+
+let i = 0;
+while (i < 15) {
+    print fib(i);
+    i = i + 1;
+}

@@ -1,5 +1,9 @@
 # Slang — a compiler for a small language
 
+**▶ Live playground: https://slang-playground.vercel.app** — write Slang in the
+browser and see the output, the AST, the bytecode disassembly, or the
+transpiled C (runs on a Vercel Python function; code in [`web/`](web/)).
+
 A complete little compiler in pure Python, no dependencies. It takes a
 C-flavoured toy language and runs it two ways:
 

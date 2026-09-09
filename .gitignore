@@ -16,3 +16,7 @@ venv/
 a.out
 /tmp/
 *.c.tmp
+
+# Vercel
+.vercel/
+web/.vercel/

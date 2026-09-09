@@ -68,9 +68,15 @@ class VM:
         return v
 
     # -- main loop -----------------------------------------
-    def run(self) -> None:
+    def run(self, max_steps: int | None = None) -> None:
         stack = self.stack
+        steps = 0
         while True:
+            if max_steps is not None:
+                steps += 1
+                if steps > max_steps:
+                    raise SlangRuntimeError(
+                        f"instruction limit ({max_steps}) exceeded — infinite loop?")
             frame = self.frame
             if frame.ip >= len(frame.chunk.code):
                 return

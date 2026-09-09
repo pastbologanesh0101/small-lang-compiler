@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slang-compiler"
+version = "0.1.0"
+description = "A compiler for a small C-flavoured language: lexer, Pratt parser, optimizer, bytecode VM, and a C transpiler backend"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Vishwanathan Tamizharasan" }]
+keywords = ["compiler", "interpreter", "parser", "pratt-parser", "bytecode", "virtual-machine", "ast", "codegen"]
+
+[project.scripts]
+slang = "slang.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["slang"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

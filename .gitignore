@@ -20,3 +20,4 @@ a.out
 # Vercel
 .vercel/
 web/.vercel/
+.claude/settings.local.json
